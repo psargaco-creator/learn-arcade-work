@@ -7,6 +7,8 @@ SCREEN_WIDTH = 600
 def main():
     initialise()
 
+    # Create a value that our on_draw.snow_person1_x will start at.
+    on_draw.snow_person1_x = 150
     arcade.schedule(on_draw, 1/60)
     arcade.run()
 
@@ -51,8 +53,5 @@ def on_draw(delta_time):
     draw_snowman(200+on_draw.snow_person1_x, 100)
 
     on_draw.snow_person1_x += 1
-
-# Create a value that our on_draw.snow_person1_x will start at.
-on_draw.snow_person1_x = 150
 
 main()
